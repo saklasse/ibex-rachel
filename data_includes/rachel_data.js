@@ -2,8 +2,8 @@ var theShuffle = rshuffle2("c1-1", "c2-1", "c3-1", "c4-1")
 var theShuffle2 = rshuffle2("c1-2", "c2-2", "c3-2", "c4-2")
 
 
-var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", rshuffle2("practice"), "realMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle, "break", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle2, "sr", "lastPage")));
-var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", rshuffle2("practice"), "realMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle2, "break", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle, "sr", "lastPage")));
+var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", rshuffle2("practice"), "realMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle, "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle2, "sr", "lastPage")));
+var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", rshuffle2("practice"), "realMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle2, "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle, "sr", "lastPage")));
 
 function chooseShuffle(){
    i = Math.floor(Math.random() * 2);
@@ -38,7 +38,7 @@ var defaults = [
     },
     "Question", {
         randomOrder: false,
-        as: [['z', 'el'], ['m', 'la']],
+        as: [['w', 'el'], ['n', 'la']],
         presentHorizontally: true,
         timeout: 3000
     },
@@ -74,30 +74,15 @@ var items = [
     ["sep", "Separator", { }],
     ["sep", "Separator", {normalMessage: "+"}],
 
-    ["intro", "Message", {
-      html: { include: "intro.html"}
-    }],
-
     ["intro", "Form", {
       html: { include: "ConsentFormRevised.html"}
     }],
     ["intro", "Form", {
       html: { include: "questionnaire.html"}
     }],
-    ["intro", "Form", {
-      html: { include: "profTest1.html"}
-    }],
-    ["intro", "Form", {
-      html: { include: "profTest2.html"}
-    }],
-    ["intro", "Form", {
-      html: { include: "profTest3.html"}
-    }],
-
 
     ["pracMsg", "Message", {html: {include: "instr1.html"}}],
     ["realMsg", "Message", {html: {include: "instr2.html"}}],
-    ["break", "Message", {html: {include: "break.html"}}],
     ["lastPage", "Message", {html: {include: "lastPage.html"}}],
 
     ["practice", "Question", {hasCorrect: 0, q: "ajo"}],
