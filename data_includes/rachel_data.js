@@ -38,7 +38,7 @@ var defaults = [
     },
     "Question", {
         randomOrder: false,
-        as: [['w', 'la'], ['n', 'el']],
+        as: [['z', 'la'], ['m', 'el']],
         presentHorizontally: true,
         timeout: 3000
     },
@@ -74,6 +74,9 @@ var items = [
     ["sep", "Separator", { }],
     ["sep", "Separator", {normalMessage: "+"}],
 
+    ["intro", "Message", {
+      html: { include: "intro.html"}
+    }],
     ["intro", "Form", {
       html: { include: "ConsentFormRevised.html"}
     }],
