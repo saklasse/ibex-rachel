@@ -84,15 +84,6 @@ var items = [
     ["intro", "Form", {
       html: { include: "questionnaire.html"}
     }],
-    ["intro", "Form", {
-      html: { include: "profTest1.html"}
-    }],
-    ["intro", "Form", {
-      html: { include: "profTest2.html"}
-    }],
-    ["intro", "Form", {
-      html: { include: "profTest3.html"}
-    }],
 
 
     ["pracMsg", "Message", {html: {include: "instr1.html"}}],
