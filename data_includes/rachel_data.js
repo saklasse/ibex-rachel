@@ -2,8 +2,8 @@ var theShuffle = rshuffle2("c1-1", "c2-1", "c3-1", "c4-1")
 var theShuffle2 = rshuffle2("c1-2", "c2-2", "c3-2", "c4-2")
 
 
-var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", rshuffle2("practice"), "realMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle, "break", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle2, "sr", "lastPage")));
-var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", rshuffle2("practice"), "realMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle2, "break", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle, "sr", "lastPage")));
+var shuffleSequence1 = seq("intro", sepWith("sep", seq("pracMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", rshuffle2("practice"), "realMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle, "break", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle2)));
+var shuffleSequence2 = seq("intro", sepWith("sep", seq("pracMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", rshuffle2("practice"), "realMsg", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle2, "break", "sepStart1", "sepStart2", "sepStart3", "sepStart4", theShuffle)));
 
 function chooseShuffle(){
    i = Math.floor(Math.random() * 2);
@@ -74,24 +74,8 @@ var items = [
     ["sep", "Separator", { }],
     ["sep", "Separator", {normalMessage: "+"}],
 
-    ["intro", "Message", {
-      html: { include: "intro.html"}
-    }],
-
-    ["intro", "Form", {
-      html: { include: "ConsentFormRevised.html"}
-    }],
     ["intro", "Form", {
       html: { include: "questionnaire.html"}
-    }],
-    ["intro", "Form", {
-      html: { include: "profTest1.html"}
-    }],
-    ["intro", "Form", {
-      html: { include: "profTest2.html"}
-    }],
-    ["intro", "Form", {
-      html: { include: "profTest3.html"}
     }],
 
 
@@ -173,8 +157,8 @@ var items = [
     ["c4-2", "Question", {hasCorrect: 1, q: "maleta"}],
     ["c4-2", "Question", {hasCorrect: 1, q: "nariz"}],
     ["c4-2", "Question", {hasCorrect: 1, q: "oficina"}],
-    ["c4-2", "Question", {hasCorrect: 1, q: "paz"}]
-    ["c4-2", "Question", {hasCorrect: 1, q: "piedra"}]
+    ["c4-2", "Question", {hasCorrect: 1, q: "paz"}],
+    ["c4-2", "Question", {hasCorrect: 1, q: "piedra"}],
     ["c4-2", "Question", {hasCorrect: 1, q: "tienda"}]
 
 ];
